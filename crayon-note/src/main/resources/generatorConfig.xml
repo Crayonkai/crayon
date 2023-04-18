@@ -1,0 +1,33 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="simple" targetRuntime="MyBatis3">
+        <!--去掉注释-->
+        <commentGenerator >
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+
+        </commentGenerator>
+        <!-- jdbc连接数据库 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/crayon"
+                        userId="root"
+                        password="yaojikai2" >
+
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.jikaigg.domain"
+                            targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="com.jikaigg.mapper"
+                         targetProject="src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.jikaigg.mapper"
+                             targetProject="src/main/java"/>
+
+        <table tableName="user" domainObjectName="User" />
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    password: yaojikai2
+    url: jdbc://localhost:3306/crayon?serverTimezone=GMT%2B8&usrSSL=false
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
