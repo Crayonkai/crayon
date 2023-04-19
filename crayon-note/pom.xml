@@ -29,5 +29,28 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.4.1</version>
+                <configuration>
+                    <!-- MyBatis Generator配置文件位置, ${basedir}/src/main/resources/generatorConfig_1.xml -->
+                    <!--          <configurationFile>src/main/resources/generatorConfig_1.xml</configurationFile>-->
+                    <!-- 是否覆盖生成的Java文件, overwrite选项只能让java文件被覆盖，xml永远是merge追加，不可配置为overwrite -->
+                    <overwrite>true</overwrite>
+                    <!-- 生成过程中是否输出详细信息 -->
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.25</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
 </project>

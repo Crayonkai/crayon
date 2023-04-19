@@ -5,3 +5,5 @@ spring:
     name: crayon-note
   profiles:
     active: dev
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

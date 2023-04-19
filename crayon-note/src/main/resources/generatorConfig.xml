@@ -17,17 +17,17 @@
 
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.jikaigg.domain"
+        <javaModelGenerator targetPackage="com.crayon.note.domain"
                             targetProject="src/main/java"/>
 
-        <sqlMapGenerator targetPackage="com.jikaigg.mapper"
+        <sqlMapGenerator targetPackage="com.crayon.note.mapper"
                          targetProject="src/main/resources"/>
 
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.jikaigg.mapper"
+                             targetPackage="com.crayon.note.mapper"
                              targetProject="src/main/java"/>
 
-        <table tableName="user" domainObjectName="User" />
+        <table tableName="biz_note" domainObjectName="BizNote" />
 
     </context>
 </generatorConfiguration>
