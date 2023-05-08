@@ -3,7 +3,9 @@ server:
 spring:
   application:
     name: crayon-note
+  # 多环境使用到的配置文件
   profiles:
     active: dev
 mybatis:
+  # mapper映射sql的xml文件路径配合
   mapper-locations: classpath:mapper/*.xml
