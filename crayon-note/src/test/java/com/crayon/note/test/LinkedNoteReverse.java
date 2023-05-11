@@ -1,5 +1,6 @@
 package com.crayon.note.test;
 
+import com.crayon.note.domain.User;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -24,6 +25,20 @@ public class LinkedNoteReverse {
             System.out.println(reverse.val);
             reverse = reverse.next;
         }
+
+    }
+    @Test
+    public void testSingle(){
+        User instance1 = User.getInstance();
+        User instance2 = User.getInstance();
+        User instance3 = User.getInstance();
+        User instance4 = User.getInstance();
+        User instance5 = User.getInstance();
+        System.out.println(instance1);
+        System.out.println(instance2);
+        System.out.println(instance3);
+        System.out.println(instance4);
+        System.out.println(instance5);
 
     }
 
