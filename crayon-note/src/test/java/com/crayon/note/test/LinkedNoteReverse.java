@@ -27,18 +27,18 @@ public class LinkedNoteReverse {
         }
 
     }
+
     @Test
-    public void testSingle(){
-        User instance1 = User.getInstance();
-        User instance2 = User.getInstance();
-        User instance3 = User.getInstance();
-        User instance4 = User.getInstance();
-        User instance5 = User.getInstance();
-        System.out.println(instance1);
-        System.out.println(instance2);
-        System.out.println(instance3);
-        System.out.println(instance4);
-        System.out.println(instance5);
+    public void testSingle() {
+        float a = 0.1f;
+        float c = 0.0f;
+        int flag = 0;
+        while (flag < 100000) {
+            c += a;
+            flag += 1;
+        }
+        System.out.println(c);
+
 
     }
 

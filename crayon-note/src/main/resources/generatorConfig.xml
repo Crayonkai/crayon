@@ -27,7 +27,9 @@
                              targetPackage="com.crayon.note.mapper"
                              targetProject="src/main/java"/>
 
-        <table tableName="biz_note" domainObjectName="BizNote" />
+<!--        <table tableName="dept" domainObjectName="Dept" />-->
+        <table tableName="emp" domainObjectName="Emp" />
+<!--        <table tableName="salgrade" domainObjectName="Salgrade" />-->
 
     </context>
 </generatorConfiguration>
