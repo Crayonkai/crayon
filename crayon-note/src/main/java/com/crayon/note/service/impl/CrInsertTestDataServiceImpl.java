@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -44,8 +45,13 @@ public class CrInsertTestDataServiceImpl implements CrInsertTestDataService {
             emp.setComm(bigDecimal1);
             int i5 = random.nextInt(5) + 1;
             emp.setDeptno(i5);
-            int i6 = empMapper.insertSelective(emp);
-            log.info("第" + i + "条新增" + (i6 == 1 ? "成功" : "失败"));
+            int i6 = 0;
+            try {
+                i6 = empMapper.insertSelective(emp);
+                log.info("第" + i + "条新增" + (i6 == 1 ? "成功" : "失败"));
+            } catch (Exception se) {
+                log.info("第" + i + "条新增" + (i6 == 1 ? "成功" : "失败"));
+            }
         }
 
         return 0;

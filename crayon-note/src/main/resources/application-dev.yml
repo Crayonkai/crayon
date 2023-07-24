@@ -4,3 +4,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/crayon?serverTimezone=GMT%2B8&usrSSL=false
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR

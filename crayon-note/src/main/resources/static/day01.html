@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="name">
+    <!---->
+    <h3>{{"jikaigg"==name?"true":"false"}}</h3>
+</div>
+
+</body>
+<script>
+    const name = new Vue({
+        el:'#name',
+        data:{
+            name:'jikaigg'
+        }
+    })
+</script>
+</html>
